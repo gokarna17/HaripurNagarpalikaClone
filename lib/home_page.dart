@@ -4,6 +4,7 @@ import 'package:haripurnagarpalika/list.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'image.dart';
+import 'pages/support_feedback.dart';
 import 'widgets/container.dart';
 import 'widgets/my_drawer.dart';
 
@@ -64,7 +65,7 @@ class HomePage extends StatelessWidget {
               ),
               MyCustomContainer(
                 AssetName: i5,onTap: () {
-                 // Get.to(()=>SupportAndFeedback());
+                  Get.to(()=>SupportAndFeedback());
                   
                 },
               ),

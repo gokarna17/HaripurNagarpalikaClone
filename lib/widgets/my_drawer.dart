@@ -45,7 +45,7 @@ class MyDrawer extends StatelessWidget {
             leading: Icon(Icons.drive_file_move_rounded),
             title: Text("नियमावली"),
             onTap: () {
-              //Get.to(()=>RulesAndRegulation());
+              //gitGet.to(()=>RulesAndRegulation());
             },
           ),
         ],
