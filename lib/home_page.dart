@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:haripurnagarpalika/list.dart';
 import 'package:haripurnagarpalika/pages/about.dart';
+
+import 'package:haripurnagarpalika/pages/emergency.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'image.dart';
@@ -110,7 +112,9 @@ class HomePage extends StatelessWidget {
                   ),
                   MyCustomContainer(
                     AssetName: i1,
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => EmergencyPage());
+                    },
                   ),
                 ],
               ),
