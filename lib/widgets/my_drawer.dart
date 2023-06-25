@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 
 import '../image.dart';
 
-
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({super.key });
+  const MyDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +12,12 @@ class MyDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text("हरिपुर नगरपालिका"),
-            accountEmail: Text("contact@haripurnagarpalika.com"),
-            currentAccountPicture: Image.asset(s3,fit: BoxFit.fill,)
-            ),
-          
+              accountName: Text("हरिपुर नगरपालिका"),
+              accountEmail: Text("contact@haripurnagarpalika.com"),
+              currentAccountPicture: Image.asset(
+                s3,
+                fit: BoxFit.fill,
+              )),
           ListTile(
             leading: Icon(Icons.location_off),
             title: Text("सम्कर्क"),

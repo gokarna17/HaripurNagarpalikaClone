@@ -10,15 +10,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(debugShowCheckedModeBanner: false,darkTheme: ThemeData.dark(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
       title: 'HariPur Nagarpalika',
-      theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.blue,),
-      scaffoldBackgroundColor: Colors.white,
-      
-        
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Colors.blue,
+        ),
+        scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
@@ -26,8 +28,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

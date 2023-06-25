@@ -1,28 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:haripurnagarpalika/pages/about_screen/janapartinidhi.dart';
+import 'package:haripurnagarpalika/pages/about_screen/karyekaram.dart';
+import 'package:haripurnagarpalika/pages/about_screen/parichaye.dart';
 
-import 'package:get/get.dart';
-
-import '../controller/tabbar_controller.dart';
-
-
-
-class About extends StatelessWidget {
-  const About({super.key});
+class AboutScreen extends StatefulWidget {
+  const AboutScreen({super.key});
 
   @override
+  State<AboutScreen> createState() => _AboutScreenState();
+}
+
+class _AboutScreenState extends State<AboutScreen> {
+  @override
   Widget build(BuildContext context) {
-    final MyController _tabs = Get.put(MyController());
-    return Scaffold(
-      appBar: AppBar(title: Text("हम्रो बारेमा"),
-        bottom: TabBar(labelColor: Colors.white,
-          controller: _tabs.controller, tabs: _tabs.myTabs),
-          
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Hamrobarema"),
+          bottom: TabBar(
+              dividerColor: Colors.white,
+              labelColor: Colors.white,
+              indicatorWeight: 4,
+              splashFactory: NoSplash.splashFactory,
+              labelStyle: TextStyle(fontWeight: FontWeight.bold),
+              tabs: [
+                Tab(child: Text("parichaye")),
+                Tab(child: Text("janapartinidhi")),
+                Tab(child: Text("karmachariharu"))
+              ]),
+        ),
+        body:
+            TabBarView(children: [Parichaye(), Janapartinidhi(), KaryeKaram()]),
       ),
-      body: TabBarView(controller: _tabs.controller,
-        children:[
-          // MyDrawer(),
-          // HomePage()
-        ]),
     );
   }
 }
